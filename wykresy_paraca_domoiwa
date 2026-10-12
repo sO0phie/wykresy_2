@@ -1,0 +1,27 @@
+info = []
+
+with open("magnesium_combustion_with_energy.txt", 'r') as data:
+    for linia in data:
+#---------------------------------------------------------------------------
+
+import matplotlib.pyplot as plt
+
+
+x = [x for x in range(-10,11)]
+
+y1 = [x**2 for x in range(-10,11)]
+y2 = [x**3 for x in range(-10,11)]
+y3 = [x*2-10 for x in range(-10,11)]
+
+plt.plot(x,y1, label="f(x)=x**2")
+plt.plot(x,y2, label="f(x)=x**3")
+plt.plot(x,y3, label="f(x)=2x-10")
+
+
+plt.legend()
+plt.xlabel("x")
+plt.ylabel("y")
+plt.grid(True)
+plt.show()
+
+#------------------------------------------------------------------------------------
